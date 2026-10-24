@@ -1,0 +1,34 @@
+# ---- Data: never commit (download from CMS instead) ----
+*.csv
+*.zip
+*.parquet
+data/
+batches/
+
+# ---- Secrets and local config ----
+.env
+*.pem
+*token*
+.databrickscfg
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# ---- Databricks / tools ----
+.databricks/
+.bundle/
+
+# ---- dbt (if we use it) ----
+target/
+dbt_packages/
+logs/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
