@@ -22,6 +22,9 @@ CREATE SCHEMA IF NOT EXISTS ops     COMMENT 'Data quality, reconciliation, audit
 CREATE VOLUME IF NOT EXISTS healthcare_dev.landing.raw
 COMMENT 'CMS synthetic RIF files, organized by batch';
 
+CREATE VOLUME IF NOT EXISTS healthcare_dev.landing.cms_downloads
+COMMENT 'Original CMS downloads, untouched. Simulated source system.';
+
 -- Verification
 SHOW SCHEMAS IN healthcare_dev;
 SHOW VOLUMES IN healthcare_dev.landing;
