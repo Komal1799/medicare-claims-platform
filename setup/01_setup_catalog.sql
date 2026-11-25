@@ -18,12 +18,14 @@ CREATE SCHEMA IF NOT EXISTS gold    COMMENT 'Star schema and data products, de-i
 CREATE SCHEMA IF NOT EXISTS metrics COMMENT 'Marts feeding dashboards';
 CREATE SCHEMA IF NOT EXISTS ops     COMMENT 'Data quality, reconciliation, audit';
 
--- Volume: landing zone for raw CMS files
+-- Volumes: landing zones for raw files
 CREATE VOLUME IF NOT EXISTS healthcare_dev.landing.raw
 COMMENT 'CMS synthetic RIF files, organized by batch';
 
 CREATE VOLUME IF NOT EXISTS healthcare_dev.landing.cms_downloads
 COMMENT 'Original CMS downloads, untouched. Simulated source system.';
+
+/Volumes/healthcare_dev/landing/reference/icd10cm/fy2023/
 
 -- Verification
 SHOW SCHEMAS IN healthcare_dev;
